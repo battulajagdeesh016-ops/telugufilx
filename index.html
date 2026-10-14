@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101014">
+  <meta name="description" content="Discover independent Telugu movies and web series on TeluguFlix.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+  <title>TeluguFlix</title>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="TeluguFlix home">TELUGU<span>FLIX</span></a>
+    <button id="installBtn" class="install hidden">Install app</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">MANA CINEMA · MANA STORIES</p>
+      <h1>Independent Telugu stories.<br><em>One home.</em></h1>
+      <p class="sub">Discover films and web series from emerging Telugu creators.</p>
+      <a class="primary" href="#catalogue">Explore titles</a>
+    </section>
+
+    <section class="section" id="catalogue">
+      <div class="section-head">
+        <div><p class="eyebrow">DISCOVER</p><h2>Telugu stories</h2></div>
+        <input id="search" type="search" placeholder="Search titles…" aria-label="Search titles">
+      </div>
+      <div class="filters" role="group" aria-label="Filter titles">
+        <button class="filter active" data-filter="All">All</button>
+        <button class="filter" data-filter="Movie">Movies</button>
+        <button class="filter" data-filter="Web Series">Web series</button>
+        <button class="filter" data-filter="Short Film">Short films</button>
+      </div>
+      <div id="grid" class="grid" aria-live="polite"></div>
+    </section>
+
+    <section class="notice">
+      <strong>Creator-first cinema</strong>
+      <p>TeluguFlix will feature only content we own or have written permission to stream. Titles shown here are demo placeholders, not available films.</p>
+    </section>
+  </main>
+
+  <dialog id="details">
+    <button class="close" id="closeDetails" aria-label="Close">×</button>
+    <p class="eyebrow" id="detailType">TITLE</p>
+    <h2 id="detailTitle">Title</h2>
+    <p id="detailDescription"></p>
+    <p class="muted" id="detailStatus">Demo listing — no video attached.</p>
+    <button class="primary" id="watchButton">Watch</button>
+  </dialog>
+
+  <footer>© <span id="year"></span> TeluguFlix · Independent Telugu cinema</footer>
+  <script src="app.js"></script>
+</body>
+</html>
